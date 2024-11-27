@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
 function App() {
+  const openLink = (fileUrl) => {
+    window.open(fileUrl, '_blank'); // Open the link in a new tab
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white">
+      <h1 className="text-4xl font-bold mb-4">Welcome to kakaoStory Page</h1>
+      <p className="text-lg text-gray-300 mb-6">
+        Access your desired application or tool below.
+      </p>
+      <div className="flex flex-row space-x-4">
+        <button
+          onClick={() =>
+            openLink('https://drive.google.com/file/d/1WRVprb1TKs-bkxn4rXNT4a2IMnB_0z6z/view?usp=drive_link')
+          }
+          className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-400"
         >
-          Learn React
-        </a>
-      </header>
+          Open LineageII Bot
+        </button>
+        <button
+          onClick={() =>
+            openLink('https://drive.google.com/file/d/1rQwy0Po8PNCUBrLiJdzlwjUo3Q5kJSSi/view?usp=drive_link')
+          }
+          className="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-400"
+        >
+          Open Blackjack Bot
+        </button>
+        <button
+          onClick={() =>
+            openLink('https://drive.google.com/file/d/1EI-fyUSk8iRVYMnSzbyJYiMgTqmNj7fQ/view?usp=drive_link')
+          }
+          className="px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-400"
+        >
+          Open Poker Bot
+        </button>
+      </div>
     </div>
   );
 }
