@@ -4,6 +4,7 @@ function App() {
   const openLink = (fileUrl) => {
     window.open(fileUrl, '_blank'); // Open the link in a new tab
   };
+  
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white">
